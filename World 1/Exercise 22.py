@@ -1,0 +1,7 @@
+print("-"*13)
+print("Name Analysis")
+print("-"*13)
+name = str(input("Write your name: ")).strip()
+print("-"*12)
+sort = name.split()
+print("You name only in upper: {}\nYour name only in lower: {}\nYour first name has: {} letters\nYour entire name has {}: letters".format(name.upper(), name.lower(), len(sort[0]), len(name)-name.count(" ")))

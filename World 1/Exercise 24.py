@@ -1,0 +1,6 @@
+print("-"*17)
+print("City Analysis")
+print("-"*17)
+city = str(input("Write the name of you city: ")).strip()
+print("Your city has 'Saint' at start of the name ? ")
+print(city[:5].upper() == 'Saint')
