@@ -1,6 +1,5 @@
 from playsound import playsound
-
-playsound('C:/Users/linek/PycharmProjects/pythonProject/Blood on the Leaves.mp3')
+playsound('/path/to/a/sound/file/you/want/to//Blood on the Leaves.mp3')
 
 # I used the music Blood on the Leaves from Kanye West as demonstrative to make sure this exercise was going to work
 
