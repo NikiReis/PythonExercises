@@ -1,18 +1,18 @@
-def half(number = 0):
-    r = number / 2
+def half(price = 0):
+    r = price / 2
     return r
 
-def double(number = 0):
-    r = number * 2 
+def double(price = 0):
+    r = price * 2 
     return r
 
-def percent(number = 0, percentage = 0):
-    r = number + (number*percentage/100)
+def percent(price = 0, percentage = 0):
+    r = price + (price*percentage/100)
     return r
 
-def reducing(number = 0, percentage = 0):
-    r = number - (number*percentage/100) 
+def reducing(price = 0, percentage = 0):
+    r = price - (price*percentage/100) 
     return r 
 
-def coin2(number = 0):
-    return f'{number:.2f}'.replace('.',',')
+def coin2(price = 0, value = 'USD '):
+    return f'{value}{price:.2f}'.replace('.',',')
