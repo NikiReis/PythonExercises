@@ -23,5 +23,5 @@ def coin2(price=0, valor='USD '):
   
   """
   The exercise 109.py didn't work in Python 3.10
-  but is basically the samething of the exercise 108.py
+  but is basically the same thing of the exercise 108.py
   """
