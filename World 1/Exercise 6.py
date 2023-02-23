@@ -1,12 +1,14 @@
-
 import math
-print("-"*29)
-print(" Double, Triple & SquareRoot ")
-print("-"*29)
-number=int(input(" Type a value: "))
-double = number*2
-triple = number*3
-square = math.sqrt(number)
-print("The double of ",number," is :", double)
-print("The triple of ",number," is :", triple)
-print("The Square Root of ",number," is :", square)
+def math_ops(value):
+    if value < 0:
+        return f'Number: {value}\nDouble: {value * 2}\nTriple: {value * 3}\nSquare root: Numeric values doesn\'t have square roots!!'
+    else:
+        return f'Number: {value}\nDouble: {value * 2}\nTriple: {value * 3}\nSquare root: {math.sqrt(value):.3f}'
+
+
+try:
+    number = float(input('Type a value: '))
+except ValueError:
+    print('Invalid value. Please, type only numeric values!! ')
+else:
+    print(math_ops(number))
