@@ -1,10 +1,14 @@
-from time import sleep
-print("-"*10)
-print("BRL to USD")
-print("-"*10)
-usd = float(input("What's the dollar's value at the moment ? "))
-sleep(1)
-brl = float(input("Right, how R$ do you want to convert ? "))
-converted = brl/usd
-print("-"*10)
-print("R$ {} converted to dollar is esquivalent to: {:.2f} USD".format(brl,converted))
+def conversion(brl,dollar):
+    return f'{brl} converted to usd dollar is equivalent to: U$ {brl/dollar:.2f}'
+
+
+try:
+    num = int(input('Type a value in Brl: '))
+    usd = float(input("What's the value of the dollar today ? "))
+    if num < 0 or usd < 0:
+        print('None of the values can\'t be negative, please try again')
+        exit()
+except ValueError:
+    print('Invalid Value! Please, type only numeric values')
+else:
+    print(conversion(num, usd))
