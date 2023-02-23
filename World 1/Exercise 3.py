@@ -1,4 +1,7 @@
-num1 = int(input('Type a number: '))
-num2 = int(input('Type another one: '))
-sum = num1 + num2
-print("The sum between {} and {} is equal to: {}".format(num1,num2,sum))
+def sum(number1: int, number2: int):
+    return f"The sum between {number1} and {number2} is equal to: {num1+num2}"
+
+
+num1 = int(input('Type a number :'))
+num2 = int(input('Type another one :'))
+print(sum(num1, num2))
