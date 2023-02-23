@@ -1,7 +1,10 @@
-print("-"*17)
-print(" Meters to cm/mm ")
-print("-"*17)
-meters = float(input("Type a value: "))
-cm = meters*100
-mm = meters*1000
-print("{} meters  in centimeters is: {} centimeters \nIn millimeters is: {} millimeters".format(meters,cm,mm))
+try:
+    num = int(input('Type a distance in meters: '))
+    if num < 0:
+        num = abs(num)
+except ValueError:
+    print(f'Please type only numeric values')
+else:
+    print(f'Distance of {num} meters is equal to: ', end='\n')
+    print(f'Kilometers: {num/1000}km\nHectometers: {num/100}hm\nDecameters: {num/10}dam', end='\n')
+    print(f'Decimeters: {num*10}dm\nCentimeters: {num*100}cm\nMillimeters: {num*1000}mm')
