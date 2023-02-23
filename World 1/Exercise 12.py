@@ -15,4 +15,3 @@ except ValueError:
     print('Please, type only numeric values!')
 else:
     print(discount(price))
-    
