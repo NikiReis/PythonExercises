@@ -1,8 +1,14 @@
-print("-"*18)
-print(" Necessery Ink ")
-print("-"*18)
-width = float(input("Wall's width: "))
-height =float(input("Wall's height: "))
-area = width*height
-print("-"*18)
-print("Wall's area {} m²\n1L pint 2m²\nWill be necessery {}L of ink\nto paint the wall".format(area,(area/2)))
+def tint_wall(height, width):
+    return f'Your wall has {height*width:.2f}.\nTo tint this wall i\'ll need {(height*width)/2:.2f}l of ink'
+
+
+try:
+    h = float(input('Type the height of the wall: '))
+    w = float(input('Now type the width: '))
+    if h < 0 or w < 0:
+        print('The values can\'t be negative!!')
+        exit()
+except ValueError:
+    print('You probably typed a string value, please type only numeric values!!')
+else:
+    print(tint_wall(h, w))
