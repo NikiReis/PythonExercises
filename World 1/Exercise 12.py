@@ -1,12 +1,18 @@
-from multiprocessing.sharedctypes import Value
+def discount(value):
+    if value == 0:
+        print('The product\'s price is zero, that means that the product is free')
+        exit()
+    else:
+        return f'The product that coasted U$ {value}, now with 5% of discount is costing: U$ {value - (value*0.05):.2f}'
 
 
-print("-"*23)
-print("Discount Calculator")
-print("-"*23)
-Value = float(input("Product's value: R$ "))
-discountpercentage = int(input("Discount's percentage: "))
-finalvalue = Value -(Value*(discountpercentage/100))
-print("-"*23)
-print("The final value with {}% off: {:.2f}".format(discountpercentage,finalvalue))
-print("-"*23)
+try:
+    price = float(input('How much is the product ? '))
+    if price < 0:
+        print('Doesn\'t exist negative prices')
+        exit()
+except ValueError:
+    print('Please, type only numeric values!')
+else:
+    print(discount(price))
+    
