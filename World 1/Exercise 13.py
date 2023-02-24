@@ -1,9 +1,14 @@
-print("-"*18)
-print("Salary Adjustment")
-print("-"*18)
-name = str(input("Employe's name: "))
-salary = float(input("What's the employe salary ? "))
-newsalary = salary + (salary*0.15)
-print("-"*18)
-print("Name: {}\nSalary: R$ {}\nNew salary: R$ {:.2f}".format(name, salary, newsalary))
-print("-"*18)
+def new_salary(name, salary):
+    return f'Employee\'s name: {name}. Salary: {salary}.\nLinek\'s new salary after a 15% of raise: {salary + (salary*0.15):.2f}'
+
+
+try:
+    value = float(input("What\'s the employee salary: "))
+    employee_name = str(input('What\'s the employee\'s name ? '))
+    if employee_name.isnumeric():
+        print('Please type only letters, numbers can\'t be accept as name!')
+        exit()
+except ValueError:
+    print('Something\'s wrong, please try again!!')
+else:
+    print(new_salary(employee_name, value))
