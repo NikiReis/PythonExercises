@@ -1,5 +1,5 @@
 def student_avg(value1, value2):
-    return f'First grade: {value1}\nSecond grade" {value2}\nAverage student\'s grade is: {(value1+value2)/2}'
+    return f'First grade: {value1}\nSecond grade" {value2}\nAverage grade of the student is: {(value1+value2)/2}'
 
 
 try:
