@@ -1,10 +1,12 @@
-import random
-print("-"*14)
-print(" 'Prize Draw' ")
-print("-"*14)
-stdnt1 = str(input("First Student: "))
-stdnt2 = str(input("Second Student: "))
-stdnt3 = str(input("Third Student: "))
-stdnt4 = str(input("Fourth Student: "))
-list = [stdnt1, stdnt2, stdnt3, stdnt4]
-print("The chosen one was: {}".format(random.choice(list)))
+from random import choice
+
+try:
+    print('Prize Draw')
+    quantity = int(input('How many students does the classroom has ? '))
+except ValueError:
+    print('Error! Type only numeric numbers!')
+else:
+    students = []
+    for x in range(0, quantity):
+        students.append(str(input(f'Type the name of the {x} student: ')))
+    print(f'The chosen one was: {choice(students)}')
