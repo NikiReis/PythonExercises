@@ -1,8 +1,10 @@
-print("-"*21)
-print("Celsius to Fahrenheit")
-print("-"*21)
-celsius = int(input("What's the temperature in celsius degreee ? "))
-fahrenheit = (celsius*1.8) + 32
-print("-"*21)
-print("{}ºC is = {}ºF".format(celsius , fahrenheit))
-print("-"*21)
+def temperature_converter(temperature):
+    return f'Celsius degree {temperature}.\nThat\'s equivalent to {(temperature*1.8)+32:.2f} Fahrenheit'
+
+
+try:
+    celsius = float(input('Type the temperature in Celsius to convert to Fahrenheit: '))
+except ValueError:
+    print('Error! Please, type only numeric values')
+else:
+    print(temperature_converter(celsius))
