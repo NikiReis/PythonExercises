@@ -1,9 +1,14 @@
-print("-"*17)
-print("Cars' Hire")
-print("-"*17)
-days = int(input("How many days do you want to hire the car ? "))
-kms = float(input("How many kilometers did you drive ? "))
-print("-"*17)
-totaltopay = (days*60)+(kms*0.15)
-print("Value per day: R$ 60\nValue per kilometers driven: R$0.15")
-print("Hired days: {}\nDriven kilometers: {}\nTotal value to be paied: R$ {:.2f}".format(days, kms, totaltopay))
+def hirecars(kilometers, days):
+    value_day = 60
+    value_km = 0.15
+    print(f'Days hired: {days}\nKilometers driven: {kilometers}')
+    return f'Total value to be payed: U$ {(days*value_day)+(kilometers*value_km):.2f}'
+
+
+try:
+    days_hired = int(input('For how many days you hired the car ? '))
+    kms_run = int(input(f'How many kilometers you drove in these {days_hired} days ?'))
+except ValueError:
+    print('Please type only numeric values!!')
+else:
+    print(hirecars(kms_run, days_hired))
