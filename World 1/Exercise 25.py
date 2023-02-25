@@ -1,6 +1,5 @@
-print("-"*13)
 print("Name Analysis")
 print("-"*13)
+
 name = str(input("Write your name: "))
-print("-"*13)
-print("Have you 'Silva' in your name ? {}".format("Silva" in name))
+print(f"Have you 'Silva' in your name ? {'Silva' in name}")
