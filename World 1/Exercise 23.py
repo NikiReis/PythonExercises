@@ -1,13 +1,11 @@
-print("-"*27)
-num = int(input("Type a value between 0 and 9999: "))
-print("-"*27)
-u = num // 1 % 10
-d = num // 10 % 10
-h = num // 100 % 10
-t = num // 1000 % 10
-print("Type number has: ")
-print("thousands: {} ".format(t))
-print("hundreds: {} ".format(h))
-print("Dozens: {} ".format(d))
-print("Units: {} ".format(u))
-print("-"*27)
+def transforming_numbers(number):
+    print(f'Number Analysis.\nThousands: {number// 1000 % 10}\nHundreds: {number // 100 % 10}', end=' ')
+    print(f'\nDozens: {number // 10 % 10}\nUnits: {number // 1 % 10}')
+
+
+try:
+    value = int(input('Type a number: '))
+except ValueError or AttributeError:
+    print('Please, type only numeric values')
+else:
+    transforming_numbers(value)
